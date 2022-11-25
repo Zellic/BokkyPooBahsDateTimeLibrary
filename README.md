@@ -2,7 +2,7 @@
 
 As part of a customer engagement, our engineers verified the correctness of a dependency, [BokkyPooBah's DateTime library](https://github.com/bokkypoobah/BokkyPooBahsDateTimeLibrary). Because this library is used by many Solidity projects, we have released our verification of this library for the public.
 
-This subdirectory contains artifacts from experiments described originally in this [Twitter thread](https://twitter.com/Zellic_io/status/1510341868021854209).
+**This repository contains artifacts from experiments described originally in this [Twitter thread](https://twitter.com/Zellic_io/status/1510341868021854209).**
 
 We verified the correctness of the core function `_daysToDate` in the contract BokkyPooBahsDateTimeLibrary. We verified `_daysToDate` by comparing it against the function [`__secs_to_tm`](https://github.com/rofl0r/musl/blob/master/src/time/__secs_to_tm.c) in [musl libc](https://musl.libc.org/). This function is used to implement gmtime in musl libc. **No attempt was made to verify other behavior of the DateTime library outside of this function.**
 
